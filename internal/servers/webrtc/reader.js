@@ -403,6 +403,7 @@
           }
 
           this.sessionUrl = new URL(res.headers.get('location'), this.conf.url).toString();
+          this.sessionUrl = this.sessionUrl?.replaceAll('.dev', '.dev/webrtc');
 
           return res.text();
         });

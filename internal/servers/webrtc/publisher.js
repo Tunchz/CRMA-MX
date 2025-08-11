@@ -306,9 +306,7 @@
 
           this.sessionUrl = new URL(res.headers.get('location'), this.conf.url).toString();
           this.sessionUrl = this.sessionUrl?.replaceAll('.dev', '.dev/webrtc');
-          // this.sessionUrl = new URL('/webrtc' + res.headers.get('location'), '').toString();
-          console.log("------- res.headers : ", res.headers.get('host'), res.headers.get('origin'));
-          console.log("------- this.sessionUrl : ", res.headers.get('location'), this.conf.url, this.sessionUrl);
+          
           return res.text();
         });
     };
