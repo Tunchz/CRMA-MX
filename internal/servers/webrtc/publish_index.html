@@ -187,7 +187,7 @@ const onStream = (stream) => {
 
 
   new MediaMTXWebRTCPublisher({
-    url: (new URL('whip', window.location.href) + window.location.search)?.toString()?.replaceAll('/webrtc',''),
+    url: new URL('whip', window.location.href) + window.location.search,
     stream,
     videoCodec: videoForm.codec.value,
     videoBitrate: videoForm.bitrate.value,
