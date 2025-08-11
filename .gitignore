@@ -6,3 +6,5 @@
 /internal/servers/hls/hls.min.js
 /internal/staticsources/rpicamera/mtxrpicam_*
 *.DS_Store
+/recordings
+/screenshots
