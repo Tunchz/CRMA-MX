@@ -151,7 +151,7 @@ apiTrustedProxies: []
 # Global settings -> Metrics
 
 # Enable Prometheus-compatible metrics.
-metrics: yes
+metrics: no #yes
 # Address of the metrics HTTP listener.
 metricsAddress: :9998
 # Enable TLS/HTTPS on the Metrics server.
@@ -174,7 +174,7 @@ metricsTrustedProxies: []
 # Global settings -> PPROF
 
 # Enable pprof-compatible endpoint to monitor performances.
-pprof: yes
+pprof: no #yes
 # Address of the pprof listener.
 pprofAddress: :9999
 # Enable TLS/HTTPS on the pprof server.
@@ -360,7 +360,7 @@ webrtcAllowOrigin: '*'
 webrtcTrustedProxies: []
 # Address of a local UDP listener that will receive connections.
 # Use a blank string to disable.
-webrtcLocalUDPAddress: :8189
+webrtcLocalUDPAddress: :8188
 # Address of a local TCP listener that will receive connections.
 # This is disabled by default since TCP is less efficient than UDP and
 # introduces a progressive delay when network is congested.

@@ -185,8 +185,9 @@ const setMessage = (str) => {
 const onStream = (stream) => {
   video.srcObject = stream;
 
+
   new MediaMTXWebRTCPublisher({
-    url: new URL('whip', window.location.href) + window.location.search,
+    url: (new URL('whip', window.location.href) + window.location.search)?.toString()?.replaceAll('/webrtc',''),
     stream,
     videoCodec: videoForm.codec.value,
     videoBitrate: videoForm.bitrate.value,
@@ -365,7 +366,7 @@ const populateOptions = () => {
 const setupEventListeners = () => {
   const url = new URL(window.location.href);
   const inputs = [...Object.values(videoForm), ...Object.values(audioForm)]
-
+  
   for (const input of inputs) {
     if (input instanceof HTMLInputElement && input.type === 'text') {
       input.addEventListener('input', () => {
